@@ -1,1 +1,117 @@
-Initializing
+# Repolex Knowledge Graph of explosion/ellf-terraform-cluster
+
+RDF knowledge graph data for [explosion/ellf-terraform-cluster](https://github.com/explosion/ellf-terraform-cluster), parsed by [repolex](https://repolex.ai).
+
+> **Note**: This data is experimental and subject to change without notice.
+
+## How to use this data
+
+The easiest way to get started is to install the [rlex](https://github.com/repolex-ai/rlex) query tool:
+
+```bash
+cargo install --git https://github.com/repolex-ai/rlex
+```
+
+Verify the install:
+
+```bash
+rlex --help
+```
+
+**rlex is designed to be used primarily by LLMs in a terminal.** Start up your favorite AI assistant and ask it to use rlex. It handles the SPARQL — you just ask questions in plain English.
+
+To load this repo's data:
+
+```bash
+rlex download explosion/ellf-terraform-cluster
+```
+
+Consult `rlex --help` for other options, including SPARQL queries, HTTP server, and interactive visualization.
+
+## Data structure
+
+All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) (`.nq.gz`), a standard RDF format that can be loaded into any triplestore or graph database.
+
+```
+.
+├── aggregate
+│   ├── ast
+│   │   └── 1463372665acf2c1afa9c192bc51a243a59278b5
+│   │       └── chunk-001.nq.gz
+│   └── repolex
+│       └── 1463372665acf2c1afa9c192bc51a243a59278b5
+│           └── chunk-001.nq.gz
+├── blob
+│   ├── 030db22effd3715f63dfb28b880257adbdf11a17.nq.gz
+│   ├── 04a9bde2323ca8f8c4e3b5ef8242b03b4b0858d5.nq.gz
+│   ├── 0a99478d328841ac37480582905bdb85e31fc45c.nq.gz
+│   ├── 1250a0148cc9a7500b5e3b494b0b097d540fe693.nq.gz
+│   ├── 150e842c82855c4c25ac0671105baffc42a261f6.nq.gz
+│   ├── 17c1b2e6cf4a75c0bc778c996211e10bc2381d7b.nq.gz
+│   ├── 2737ba3dbdbadb49138bc5f8a9b979d3858aa8cf.nq.gz
+│   ├── 2c875477ce59c6cf02e9ce2d056387ac465a30c7.nq.gz
+│   ├── 30dd8692f7a50bf62b2d4f0f240bcf90e7141a2e.nq.gz
+│   ├── 32a01b030bbde9885538c9ef522c4a12a4f75f3e.nq.gz
+│   ├── 37a3a9a093d6bd2b1ba3e8de34b5408d1b34d98d.nq.gz
+│   ├── 3908c9b8424293390a9a4f8946aea7b1b35721c1.nq.gz
+│   ├── 405231210782459d15b7d0fe9d3083e91c881fd3.nq.gz
+│   ├── 406f30c2a3512c9d60dbf4769766eb369447e7c1.nq.gz
+│   ├── 40bdff3eb2e13e336984c9460d459326242da78e.nq.gz
+│   ├── 4beecb06fe5f080903d34d131841deb11fa3d158.nq.gz
+│   ├── 4d09ba3d44e2d1f2d275f0ebaabb89e81220e7cd.nq.gz
+│   ├── 53740898149faffcd99aa05e3c1bf5706c049dfd.nq.gz
+│   ├── 5a0af413bd594cde310404465eca0c94528f2f94.nq.gz
+│   ├── 68df7606b1743c695d3fe523cff5b8d800ae2c91.nq.gz
+│   ├── 69489b10abaf86a686f3dda0f6a47bcd8a3c85b8.nq.gz
+│   ├── 6a4d4944b8b23810604ca4e7c17bf85e20b79217.nq.gz
+│   ├── 76dcf0ad0d0227077ef087ec3dbb2524e4397c53.nq.gz
+│   ├── 81ec77973fb097725e7ddff077cb70abc7aac161.nq.gz
+│   ├── 8418a3a7b329175bd7f78a021dc82b6f903d3ad4.nq.gz
+│   ├── 84db16b3b4fb0fbfc6662fc523ed7e11ef71ad27.nq.gz
+│   ├── 85c96a8f146125b17ea4b2c9de02a3adf9bc9216.nq.gz
+│   ├── 87ab93dc70b53c1966aeb93f05307937e04d4c24.nq.gz
+│   ├── 9ba20de84f6abaddc85c5dd496fede04f262b46b.nq.gz
+│   ├── a0ed94e1332ef39ac2477e962bf874f1d525757a.nq.gz
+│   ├── b537e193d354e01062ddfcacb5ac983a4f87c8d8.nq.gz
+│   ├── b792657be28b472cd1c5be479d1db6554796da45.nq.gz
+│   ├── be03a461a22e1a22ebe00088d3d8764635611ce4.nq.gz
+│   ├── c228e4adb6d3012c35e799de0e5ac8a183a856de.nq.gz
+│   ├── c33247278fcf790fd23e69e936ce38b735352228.nq.gz
+│   ├── c3c8f67ca86fdeaf276e97f03b0f0cd48c6184c9.nq.gz
+│   ├── c5ae4f340446a5b047d38a38be06046ac9435374.nq.gz
+│   ├── c91d9dec9ae584a01d02a89351a0feb7244356ef.nq.gz
+│   ├── db8325afd8ac96d9167f29bb2aeb46b366f42fe9.nq.gz
+│   ├── f4da010a4b863a9962db0e1ed5eeb4ee4f572ce3.nq.gz
+│   ├── f7687e8a8ae45a52e747559161135827cf86daef.nq.gz
+│   └── f8295f07eea4a2a07f6ddd33be0516d6a015dd0e.nq.gz
+├── branch
+│   └── branch.nq.gz
+├── commit
+│   └── commit.nq.gz
+├── filetree
+│   └── 1463372665acf2c1afa9c192bc51a243a59278b5.nq.gz
+└── tag
+    └── tag.nq.gz
+
+11 directories, 48 files
+```
+
+| Directory | What it contains |
+|-----------|-----------------|
+| `blob/` | Per-file AST graphs, content-addressed by git blob SHA. Each file in the source repo gets its own graph. |
+| `aggregate/ast/` | Combined AST graph per parsed commit. Merges all blob graphs for a snapshot of the entire codebase at that point. |
+| `aggregate/lsp/` | Language Server Protocol enrichment: resolved symbols, definitions, references, and type information. |
+| `aggregate/dataflow/` | Interprocedural data flow edges between functions and modules. |
+| `aggregate/repolex/` | Combined graph (AST + LSP + dataflow) per commit. |
+| `commit/` | Git commit metadata (author, date, message, parent links). |
+| `branch/` | Branch metadata. |
+| `tag/` | Tag metadata. |
+| `filetree/` | File tree snapshots per commit (which files existed and their blob SHAs). |
+| `audit/` | Code architecture and graph audit reports per commit. |
+
+## Source repository
+
+[explosion/ellf-terraform-cluster](https://github.com/explosion/ellf-terraform-cluster)
+
+---
+*Parsed on 2026-11-08 by [repolex](https://repolex.ai)*
